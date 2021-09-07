@@ -1,0 +1,54 @@
+package Intro;
+
+import java.util.Scanner;
+
+public class LootHouses {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		int size= s.nextInt();
+		int[] arr= new int[size];
+		
+		for(int i=0;i<size;i++) {
+			arr[i]=s.nextInt();
+		}
+		
+		int ans= lootHouses(arr);
+
+	}
+	
+	
+	
+	
+	//recursive solution
+	private static int lootHouses(int[] arr) {
+		return lootHouses(arr,0,arr.length-1);
+	}
+
+
+
+
+	private static int lootHouses(int[] arr, int start, int end) {
+		if(start>end) {
+			return 0;
+		}
+		
+		int ansMax= Integer.MIN_VALUE;
+		for(int i=start;i<end;i++) {
+			int tempMax=Integer.MIN_VALUE;
+			for(int j=i+2;j<end;j++) {
+				int temp= lootHouses(arr,j,end);
+				if(temp>tempMax) {
+					tempMax=temp;
+				}
+			}
+			int temp1Max=arr[i]+tempMax;
+			if(temp1Max>ansMax) {
+				ansMax=temp1Max;
+			}
+		}
+		
+		return ansMax;
+	}
+
+}

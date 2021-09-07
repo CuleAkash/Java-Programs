@@ -1,0 +1,35 @@
+import java.util.HashMap;
+
+public class InBuiltHashmapUse {
+
+	public static void main(String[] args) {
+		HashMap<String, Integer> map = new HashMap();
+		map.put("abc", 2);
+		map.put("def", 4);
+		//to insert key value pairs into the hashmap
+		
+		if(map.containsKey("abc")) {
+			System.out.println("true");
+		}
+		if(!map.containsKey("abc1")) {
+			System.out.println("true");
+		}
+		//to verify if a key-value pair is already present in the map
+		
+		int v= map.get("abc");
+		System.out.println(v);
+		
+		int v1= map.get("abc1");
+		//System.out.println(v1);
+		// it will give null pointer exception as the value of the key value pair is itself an object of class Integer and as it has no value the object will point to null
+		//so it will be good to check whether the key is present before getting the key value
+		v1=0;
+		if(map.containsKey("abc1")) {
+			v1=map.get("abc1");
+		}
+		System.out.println(v1);
+		
+
+	}
+
+}

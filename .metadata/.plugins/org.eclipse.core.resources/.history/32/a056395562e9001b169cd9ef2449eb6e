@@ -1,0 +1,88 @@
+package Implementation;
+
+public class QueueUsingArray {
+	private int[] data;
+	private int front;
+	private int rear;
+	private int size;
+	
+	public QueueUsingArray()
+	{
+		data= new int[5];
+		front=rear=size=0;
+	}
+	
+	public QueueUsingArray(int size)
+	{
+		data= new int[size];
+		this.size=0;
+	}
+	
+	public int size()
+	{
+		return this.size;
+	}
+	
+	public boolean isEmpty()
+	{
+		return size==0;
+	}
+	
+	public void enqueue(int n)
+	{
+		if(size==data.length)
+		{
+			doubleCapacity();
+		}
+		if(front==-1)
+		{
+			front++;
+		}
+		rear++;
+		size++;
+		data[rear]=n;
+	}
+
+	private void doubleCapacity() {
+		int[] temp= new int[2*data.length];
+		for(int i=0;i<data.length;i++)
+		{
+			temp[i]=data[i];
+		}
+		data=temp;	
+	}
+	
+	public int dequeu() throws EmptyQueueException
+	{
+		if(size==0)
+		{
+			throw new EmptyQueueException();
+		}
+		else
+		{
+			size--;
+			int temp=data[front];
+			front++;
+			if(size==0)
+			{
+				front=-1;
+			}
+			return temp;
+		}
+	}
+	
+	public int front() throws EmptyQueueException
+	{
+		if(size==0)
+		{
+			throw new EmptyQueueException();
+		}
+		else
+		{
+			return data[front];
+		}
+	}
+	
+	
+}
+

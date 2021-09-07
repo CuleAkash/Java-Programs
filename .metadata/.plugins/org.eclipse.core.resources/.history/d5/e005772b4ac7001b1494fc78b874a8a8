@@ -1,0 +1,30 @@
+package ARRAYSandSTRINGS;
+
+import java.util.Scanner;
+
+public class ARRANGE {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		System.out.println("Enter the max number:");
+		int N= s.nextInt();
+		int arr[]= arrange(N);
+		System.out.println(arr);
+
+	}
+	public static int[] arrange(int N)
+	{
+		int start,end,value=1;
+		int arr[]= new int[N]
+				for(start=0,end=N-1;start<=(N-1)/2;start++,end--)
+				{
+					arr[start]=value;
+					value++;
+					arr[end]=value;
+					value++;
+				}
+		return arr;
+	}
+	
+
+}

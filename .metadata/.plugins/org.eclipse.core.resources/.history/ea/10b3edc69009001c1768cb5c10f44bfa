@@ -1,0 +1,22 @@
+package Intro;
+
+import java.util.Scanner;
+
+public class Fibonnaci {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		int n= s.nextInt();
+		System.out.println(fibonnaci(n));
+
+	}
+	
+	public static int fibonnaci(int n) {
+		if(n==0 || n==1) {
+			return n;
+		}
+		
+		return fibonnaci(n-1)+fibonnaci(n-2);
+	}
+
+}

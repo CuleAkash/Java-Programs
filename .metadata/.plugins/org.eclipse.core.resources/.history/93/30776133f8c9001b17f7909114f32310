@@ -1,0 +1,15 @@
+package ARRAYSandSTRINGS;
+
+public class StoreAndImmutability {
+
+	public static void main(String[] args) {
+		String str= "abc"; // string constructed by this syntax is stored in the string pool 
+		// string pool is memory space in the heap to store string and it came into picture for memory optimisation
+		// all primitives and local variables and functions are stored in stack and all non-primitives in heap
+		String str1 = new String("abc"); // string constructed by this syntax is stored in heap but not in string pool
+		boolean isEqual = (str==str1);
+		System.out.println(isEqual);
+
+	}
+
+}

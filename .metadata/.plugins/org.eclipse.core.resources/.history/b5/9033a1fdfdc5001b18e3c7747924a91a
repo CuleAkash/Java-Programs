@@ -1,0 +1,10 @@
+package ASSIGNMENT2;
+
+public class BINARYTODEECIMAL {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

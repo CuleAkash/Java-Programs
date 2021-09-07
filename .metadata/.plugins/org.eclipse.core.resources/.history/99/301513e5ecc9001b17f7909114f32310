@@ -1,0 +1,32 @@
+package ARRAYSandSTRINGS;
+
+import java.util.Scanner;
+
+public class PalindromeCheck {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		System.out.print("Enter the string: ");
+		String input = s.nextLine();
+		check_palindrome(input);
+
+	}
+	
+	public static void check_palindrome(String str)
+	{
+		String reverse = "";
+		for(int i=str.length()-1;i>=0;i++)
+		{
+			reverse+= str.charAt(i);
+		}
+		if(reverse.equals(str))
+		{
+			System.out.println("The string is palindrome");
+		}
+		else
+		{
+			System.out.println("String is not palindrome");
+		}
+	}
+
+}

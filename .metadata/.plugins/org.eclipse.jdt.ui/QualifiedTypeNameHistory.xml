@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.awt.desktop.SystemSleepEvent"/>
+    <fullyQualifiedTypeName name="com.sun.jmx.mbeanserver.Util"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.String"/>
+    <fullyQualifiedTypeName name="com.sun.tools.jdeprscan.scan.Scan"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="complexNumber.ComplexNumber"/>
+    <fullyQualifiedTypeName name="DynamicArray.DynamicArray"/>
+    <fullyQualifiedTypeName name="Polynomial.Polynomial"/>
+    <fullyQualifiedTypeName name="jdk.internal.misc.FileSystemOption"/>
+    <fullyQualifiedTypeName name="inheritance.Vehicle"/>
+    <fullyQualifiedTypeName name="interfaces.CarInterface"/>
+    <fullyQualifiedTypeName name="interfaces.VehicleInterface"/>
+    <fullyQualifiedTypeName name="ReverseOfLinkedList"/>
+    <fullyQualifiedTypeName name="LinkedListUse"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="RecursiveLL.Node"/>
+    <fullyQualifiedTypeName name="RecursiveLL.LinkedList"/>
+    <fullyQualifiedTypeName name="Implementation.StackUsingArray"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="Implementation.QueueUsingArray"/>
+    <fullyQualifiedTypeName name="Implementation.EmptyQueueException"/>
+    <fullyQualifiedTypeName name="BST.Pair"/>
+    <fullyQualifiedTypeName name="BST.BST"/>
+    <fullyQualifiedTypeName name="BST.DelPair"/>
+    <fullyQualifiedTypeName name="Implementation.BinaryTreeUse"/>
+    <fullyQualifiedTypeName name="Implementation.BinaryTreeNode"/>
+    <fullyQualifiedTypeName name="BST.LargestBSTReturn"/>
+    <fullyQualifiedTypeName name="Implementation.MapNode"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xerces.internal.impl.dv.xs.IntegerDV"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

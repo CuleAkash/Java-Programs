@@ -1,0 +1,20 @@
+package Implementation;
+
+public class BinaryTreeUse {
+
+	public static void main(String[] args) {
+		
+		BinaryTreeNode<Integer> root= new BinaryTreeNode<Integer>(1); //root node with data=1
+		BinaryTreeNode<Integer> rootLeft= new BinaryTreeNode<Integer>(2);
+		BinaryTreeNode<Integer> rootRight= new BinaryTreeNode<>(3);
+		root.left=rootLeft;
+		root.right=rootRight;
+		
+		BinaryTreeNode<Integer> secondRight= new BinaryTreeNode<>(4);
+		BinaryTreeNode<Integer> thirdLeft= new BinaryTreeNode<>(5);
+		rootLeft.right=secondRight;
+		rootRight.left=thirdLeft;
+
+	}
+
+}

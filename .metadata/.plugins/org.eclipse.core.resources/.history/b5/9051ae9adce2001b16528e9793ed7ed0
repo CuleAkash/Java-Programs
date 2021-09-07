@@ -1,0 +1,63 @@
+package Assignment2;
+
+import RecursiveLL.LinkedList;
+import RecursiveLL.Node;
+
+public class EvenAfterOddLL {
+
+	public static void main(String[] args) {
+		Node<Integer> head= LinkedList.createList();
+		head= arrangeEvenAfterOdd(head);
+		while(head!=null)
+		{
+			System.out.println(head.data);
+			head=head.next;
+		}
+
+	}
+	
+	public static Node<Integer> arrangeEvenAfterOdd(Node<Integer> head)
+	{
+		if(head==null)
+		{
+			return head;
+		}
+		Node<Integer> oddHead=null, oddTail=null, evenHead=null, evenTail=null;
+		while(head!=null)
+		{
+			if(head.data%2==0)
+			{
+				if(evenHead==null)
+				{
+					evenHead=head;
+					evenTail=head;
+				}
+				else
+				{
+					evenTail.next=head;
+					evenTail=evenTail.next;
+				}
+			}
+			
+			else
+			{
+				if(oddHead==null)
+				{
+					oddHead=head;
+					oddTail=head;
+				}
+				else
+				{
+					oddTail.next=head;
+					oddTail=oddTail.next;
+				}
+			}
+			head=head.next;
+		}
+		oddTail.next=evenHead;
+		evenTail.next=null;
+		return oddHead;
+		
+	}
+
+}

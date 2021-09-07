@@ -1,0 +1,51 @@
+package ARRAYSandSTRINGS;
+
+import java.util.Scanner;
+
+public class ReverseEachWord {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		System.out.print("Enter the elements of the string: ");
+		String input = s.nextLine();
+		int size= input.length();
+		String reverseWords= reverse_words(input,size);
+		System.out.println(reverseWords);
+
+	}
+	
+	
+	
+	public static String reverse_words(String input,int size)
+	{
+		String reverse ="";
+		int start=0,end=0;
+		
+		while(end<size)
+		{
+			if(input.charAt(end)==' ')
+			{
+				String temp= input.substring(start, end);
+				reverse+= reversal(temp)+" ";
+				start= end+1;
+			}
+			end++;
+		}
+		String temp= input.substring(start, end);
+		reverse+= reversal(temp)+" ";
+		return reverse;
+	}
+	
+	
+	
+	public static String reversal(String temp)
+	{	String reversal ="";
+		for(int i=0;i<temp.length();i++)
+		{
+			reversal= temp.charAt(i)+ reversal;
+			
+		}
+		return reversal;
+	}
+
+}

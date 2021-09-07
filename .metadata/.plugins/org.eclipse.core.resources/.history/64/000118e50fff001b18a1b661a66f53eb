@@ -1,0 +1,8 @@
+package BST;
+
+public class LargestBSTReturn {
+	boolean isBST;
+	int maximum;
+	int minimum;
+	int height;
+}

@@ -1,0 +1,37 @@
+package Intro;
+
+import java.util.Scanner;
+
+public class MinSquares {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		int n= s.nextInt();
+		
+		int ans= minSquares(n);
+		System.out.println(n);
+
+	}
+
+	private static int minSquares(int n) {
+		if(n==0) {
+			return 0;
+		}
+		
+		if(n==1) {
+			return 1;
+		}
+		
+		int minCount=Integer.MAX_VALUE;
+		
+		for(int i=1;i*i<=n;i++) {
+			int tempCount= minSquares(n-(i*i));
+			
+			if(tempCount<minCount) {
+				minCount=tempCount;
+			}
+		}
+		return 1+minCount;
+	}
+
+}

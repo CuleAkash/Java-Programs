@@ -1,0 +1,51 @@
+package DPProblems;
+
+import java.util.Scanner;
+
+public class MinCostPath {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		int n= s.nextInt();
+		int m= s.nextInt();
+		int[][] matrix= new int[n][m];
+		for(int i=0;i<n;i++) {
+			for(int j=0;j<m;j++) {
+				matrix[i][j]=s.nextInt();
+			}
+		}
+		
+		int minCost= minCostPath(matrix,n,m,0,0);
+		System.out.println(minCost);
+
+	}
+
+	
+	//recursive solution
+	private static int minCostPath(int[][] matrix, int row, int col, int i, int j) {
+		if(i>=row || j>=col) {
+			return Integer.MAX_VALUE;
+		}
+		
+		if(i==row-1 && j==col-1) {
+			return matrix[i][j];
+		}
+		
+		int costDown=0,costRight=0,costDiag=0;
+		
+		if(i+1<row) {
+			costDown= minCostPath(matrix, row, col, i+1, j);
+		}
+		
+		if(j+1<col) {
+			costRight= minCostPath(matrix, row, col, i, j+1);
+		}
+		
+		if(i+1<row && j+1<col) {
+			costDiag= minCostPath(matrix, row, col, i+1, j+1);
+		}
+		
+		return matrix[i][j]+Math.min(costDiag, Math.min(costRight, costDown));
+	}
+
+}

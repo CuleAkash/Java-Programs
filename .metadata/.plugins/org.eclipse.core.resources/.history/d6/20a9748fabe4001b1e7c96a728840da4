@@ -1,0 +1,43 @@
+package Implementation;
+
+public class StackUsingArray {
+	
+	private int[] arr;
+	private int topIndex;
+	
+	public StackUsingArray()
+	{
+		this.arr= new int[10];
+		this.topIndex=-1;
+	}
+	
+	public int size()
+	{
+		return this.topIndex+1;
+	}
+	
+	public boolean isEmpty()
+	{
+		if(this.topIndex==-1)
+			return true;
+		return false;
+	}
+	
+	public void push(int element)
+	{
+		this.topIndex++;
+		this.arr[this.topIndex]=element;
+	}
+	
+	public int pop()
+	{
+		int value=this.arr[this.topIndex];
+		this.topIndex--;
+		return value;
+	}
+	
+	public int top()
+	{
+		return this.arr[this.topIndex];
+	}
+}

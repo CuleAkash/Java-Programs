@@ -1,0 +1,38 @@
+package SearchAndSort;
+
+import java.util.Scanner;
+
+public class RotateArray {
+
+	public static void main(String[] args) {
+		Scanner s= new Scanner(System.in);
+		int[] input= {1,2,3,4,5,6,7};
+		int size= input.length;
+		System.out.print("Enter the no. of times the array will be rotated: ");
+		int count = s.nextInt();
+		int[] rotated_array = rotation(input,size,count);
+		for(int i=0;i<size;i++)
+		{
+			System.out.print("The rotated array is: ");
+			System.out.print(rotated_array[i]+ " ");
+		}
+
+	}
+	
+	public static int[] rotation(int[] arr,int size,int count)
+	{
+		for(int i=1;i<=count;i++)
+		{
+			int j=0;
+			int temp = arr[j];
+			while(j<size-1)
+			{
+				arr[j]=arr[j+1];
+				j++;
+			}
+			arr[j]=temp;
+		}
+		return arr;
+	}
+
+}
