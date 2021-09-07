@@ -26,7 +26,7 @@ public class MinCostPath {
 	
 	
 	//Iterative solution
-	//it is done using another matrix with one extra row and col
+	//it is done using another matrix with one extra row and col for infinity
 	private static int minCostPathBetterI(int[][] matrix, int n, int m) {
 		int[][] dp= new int[n+1][m+1];
 		
