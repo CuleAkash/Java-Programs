@@ -25,6 +25,18 @@ public class SubsetSum {
 
 
 	private static boolean subsetSumIterative(int[] arr, int size, int sum) {
+		if(sum==0) {
+			return true;
+		}
+		
+		if(size==0 && sum!=0) {
+			return false;
+		}
+		
+		if(arr[size-1]==sum) {
+			return true;
+		}
+		
 		boolean [][] dp= new boolean[size+1][sum+1];
 		for(int i=0;i<=size;i++) {
 			dp[i][0]=true;
