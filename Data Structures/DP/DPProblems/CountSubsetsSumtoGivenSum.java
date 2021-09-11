@@ -26,7 +26,7 @@ public class CountSubsetsSumtoGivenSum {
 	
 	
 	//iterative solution
-	private static int countSubsetSumIterative(int[] arr, int n, int sum) {
+	public static int countSubsetSumIterative(int[] arr, int n, int sum) {
 		if(sum==0) {
 			return 1;
 		}
