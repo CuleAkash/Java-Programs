@@ -19,6 +19,9 @@ public class DroppingEggProblem {
 
 	}
 	
+	
+	//Memoized Solution
+	
 	private static int droppingEggsMemoized(int eggs, int floors) {
 		int[][] dp= new int[eggs+1][floors+1];
 		for(int i=0;i<=eggs;i++) {
