@@ -2,6 +2,8 @@ package Basics;
 
 import java.util.ArrayList;
 
+import MaximumPriorityQueue.Element;
+
 public class PriorityQueue<E> {
 	private ArrayList<Element<E>> heap;
 	
@@ -55,7 +57,7 @@ public class PriorityQueue<E> {
 		int minIndex= parentIndex;
 		
 		//if the element doesn't have a leftChild it will surely not have a right child
-		while(leftChildIndex<heap.size()-1) {
+		while(leftChildIndex<heap.size()) {
 			//now compare the priorities of parentIndwex amd child indices
 			
 			if(heap.get(leftChildIndex).priority< heap.get(minIndex).priority) {
@@ -63,7 +65,7 @@ public class PriorityQueue<E> {
 			}
 			
 			//if the righnt child is not there
-			if(rightChildIndex < heap.size()-1 && heap.get(rightChildIndex).priority < heap.get(minIndex).priority) {
+			if(rightChildIndex < heap.size() && heap.get(rightChildIndex).priority < heap.get(minIndex).priority) {
 				minIndex= rightChildIndex;
 			}
 			
@@ -71,6 +73,11 @@ public class PriorityQueue<E> {
 			if(minIndex== parentIndex) {
 				break;
 			}
+			
+			
+			Element<E> temp= heap.get(minIndex);
+			heap.set(minIndex, heap.get(parentIndex));
+			heap.set(parentIndex, temp);
 			
 			parentIndex= minIndex;
 			leftChildIndex= 2*parentIndex+1;

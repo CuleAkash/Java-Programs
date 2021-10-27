@@ -59,7 +59,7 @@ public class MaxPriorityQueue <E> {
 				maxIndex= leftchildIndex;
 			}
 			
-			if(rightChildIndex<0 && heap.get(maxIndex).priority<heap.get(leftchildIndex).priority) {
+			if(rightChildIndex<heap.size() && heap.get(maxIndex).priority<heap.get(leftchildIndex).priority) {
 				maxIndex= rightChildIndex;
 			}
 			

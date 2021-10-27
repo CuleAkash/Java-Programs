@@ -15,7 +15,6 @@
     <fullyQualifiedTypeName name="interfaces.VehicleInterface"/>
     <fullyQualifiedTypeName name="ReverseOfLinkedList"/>
     <fullyQualifiedTypeName name="LinkedListUse"/>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
     <fullyQualifiedTypeName name="RecursiveLL.Node"/>
     <fullyQualifiedTypeName name="RecursiveLL.LinkedList"/>
     <fullyQualifiedTypeName name="Implementation.StackUsingArray"/>
@@ -29,10 +28,22 @@
     <fullyQualifiedTypeName name="Implementation.BinaryTreeNode"/>
     <fullyQualifiedTypeName name="BST.LargestBSTReturn"/>
     <fullyQualifiedTypeName name="Implementation.MapNode"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="com.sun.org.apache.xerces.internal.impl.dv.xs.IntegerDV"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="Basics.Element"/>
+    <fullyQualifiedTypeName name="Basics.PriorityQueue"/>
+    <fullyQualifiedTypeName name="Basics.EmptyPriorityQueueException"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.sun.tools.classfile.Annotation.element_value"/>
+    <fullyQualifiedTypeName name="MaximumPriorityQueue.Element"/>
+    <fullyQualifiedTypeName name="MaximumPriorityQueue.MaxPriorityQueue"/>
+    <fullyQualifiedTypeName name="MaximumPriorityQueue.EmptyPriorityQueueException"/>
+    <fullyQualifiedTypeName name="OOPS.Rectangle"/>
+    <fullyQualifiedTypeName name="BankAccount"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.util.LinkedList"/>
 </qualifiedTypeNameHistroy>
