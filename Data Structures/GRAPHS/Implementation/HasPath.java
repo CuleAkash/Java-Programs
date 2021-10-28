@@ -1,5 +1,7 @@
 package Implementation;
 
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Scanner;
 
 public class HasPath {
@@ -28,7 +30,46 @@ public class HasPath {
 		int b= s.nextInt();
 		int d= s.nextInt();
 		System.out.println(hasPathDFS(adjMatrix,b,d));
+		
+		System.out.println(hasPathBFS(adjMatrix,b,d));
 
+	}
+
+	private static boolean hasPathBFS(int[][] adjMatrix, int b, int d) {
+		if(adjMatrix.length==0) {
+			return false;
+		}
+		
+		Queue<Integer> q= new LinkedList<>();
+		boolean[] visited= new boolean[adjMatrix.length];
+		return helperBFS(adjMatrix,b,d,q,visited);
+	}
+
+	private static boolean helperBFS(int[][] adjMatrix, int b, int d, Queue<Integer> q, boolean[] visited) {
+		if(b==d) {
+			return true;
+		}
+		
+		if(adjMatrix[b][d]==1) {
+			return true;
+		}
+		
+		q.add(b);
+		visited[b]=true;
+		
+		while(!q.isEmpty()) {
+			int front= q.remove();
+			for(int i=0;i<adjMatrix.length;i++) {
+				if(adjMatrix[front][i]==1 && !visited[i]) {
+					if(i==d) {
+						return true;
+					}
+					q.add(i);
+					visited[i]=true;
+				}
+			}
+		}
+		return false;
 	}
 
 	private static boolean hasPathDFS(int[][] adjMatrix,int b,int d) {
@@ -42,6 +83,10 @@ public class HasPath {
 
 	private static boolean helperDFS(int[][] adjMatrix, int beginning, boolean[] visited, int destination) {
 		if(beginning==destination) {
+			return true;
+		}
+		
+		if(adjMatrix[beginning][destination]==1) {
 			return true;
 		}
 		
