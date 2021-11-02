@@ -36,7 +36,6 @@
     <fullyQualifiedTypeName name="Basics.Element"/>
     <fullyQualifiedTypeName name="Basics.PriorityQueue"/>
     <fullyQualifiedTypeName name="Basics.EmptyPriorityQueueException"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.sun.tools.classfile.Annotation.element_value"/>
     <fullyQualifiedTypeName name="MaximumPriorityQueue.Element"/>
     <fullyQualifiedTypeName name="MaximumPriorityQueue.MaxPriorityQueue"/>
@@ -46,4 +45,7 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Queue"/>
     <fullyQualifiedTypeName name="java.util.LinkedList"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="sun.jvm.hotspot.oops.ArrayKlass"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
