@@ -7,7 +7,36 @@ public class AdjListImplementation {
 
         int n= sc.nextInt();
         int e= sc.nextInt();
+         ArrayList<ArrayList<Integer>> adj= getGraph(n,e);
 
+        // ArrayList<ArrayList<Integer>> adj= new ArrayList<>();
+
+        // for( int i=0;i<=n;i++){
+        //     adj.add(new ArrayList<Integer>());
+        // }
+
+        // for(int i=1;i<=e;i++){
+
+        //     int u= sc.nextInt();
+        //     int v= sc.nextInt();
+
+        //     adj.get(u).add(v);//Inserting the node connected to u to the uth arraylist
+        //     adj.get(v).add(u);
+        // }
+
+
+        for(int i=0;i<adj.size();i++){
+            System.out.print(i+"=>");
+            for(int j=0;j<adj.get(i).size();j++){
+                System.out.print(adj.get(i).get(j)+" ");
+            }
+            System.out.println();
+        }
+        sc.close();
+    }
+
+    public static ArrayList<ArrayList<Integer>> getGraph(int n, int e) {
+        Scanner sc= new Scanner(System.in);
         ArrayList<ArrayList<Integer>> adj= new ArrayList<>();
 
         for( int i=0;i<=n;i++){
@@ -24,14 +53,7 @@ public class AdjListImplementation {
         }
 
 
-        for(int i=0;i<adj.size();i++){
-            System.out.print(i+"=>");
-            for(int j=0;j<adj.get(i).size();j++){
-                System.out.print(adj.get(i).get(j)+" ");
-            }
-            System.out.println();
-        }
-        sc.close();
+        return adj;
     }    
 }
 

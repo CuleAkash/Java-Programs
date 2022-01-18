@@ -7,6 +7,7 @@ public class AdjMatrixImplementation {
         Scanner s= new Scanner(System.in);
         int n= s.nextInt();//number of nodes
         int e= s.nextInt();//number of edges
+        
 
         int[][] adjMatrix= new int[n+1][n+1];
 
