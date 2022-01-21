@@ -9,6 +9,7 @@ public class RedundantBrackets {
 		Scanner s= new Scanner(System.in);
 		String str= s.next();
 		System.out.println(isRedundantPresent(str));
+		s.close();
 
 	}
 	
