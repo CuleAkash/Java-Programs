@@ -53,6 +53,7 @@ public class AdjListImplementation {
         }
 
 
+        sc.close();
         return adj;
     }    
 }
@@ -91,8 +92,8 @@ class WeightedAdjImplementation{
             int v= s.nextInt();
             int weight= s.nextInt();
 
-            adj.get(u).add(new Pair(v, weight));//Adding node as well as weight of the edge
-            adj.get(v).add(new Pair(u, weight));
+            adj.get(u).add(new Pair<>(v, weight));//Adding node as well as weight of the edge
+            adj.get(v).add(new Pair<>(u, weight));
 
         }
         
