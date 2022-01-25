@@ -35,7 +35,7 @@ public class KruskalAlgo {
         }
     }
 
-    private static ArrayList<NodeJ> createGraph(int n, int e) {
+    public static ArrayList<NodeJ> createGraph(int n, int e) {
         Scanner s = new Scanner(System.in);
         ArrayList<NodeJ> adjList = new ArrayList<>();
 
