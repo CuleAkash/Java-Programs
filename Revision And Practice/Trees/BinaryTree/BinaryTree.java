@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class BinaryTree {
 public static void main(String[] args) {
     BinaryTreeNode<Integer> root= takingTreeInput();
-    printBInaryTree(root);
+    printBinaryTree(root);
 }   
 
 
@@ -54,7 +54,7 @@ public static BinaryTreeNode<Integer> takingTreeInput() {
 }
 
 
-public static void printBInaryTree(BinaryTreeNode<Integer> root){
+public static void printBinaryTree(BinaryTreeNode<Integer> root){
     if(root==null){
         return;
     }
@@ -68,7 +68,7 @@ public static void printBInaryTree(BinaryTreeNode<Integer> root){
     }
     System.out.println();
 
-    printBInaryTree(root.left);
-    printBInaryTree(root.right);
+    printBinaryTree(root.left);
+    printBinaryTree(root.right);
 }
 }

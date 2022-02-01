@@ -11,7 +11,7 @@ public class TreeHeight {
         s.close();
     }
 
-    private static int getHeight(BinaryTreeNode<Integer> root) {
+    public static int getHeight(BinaryTreeNode<Integer> root) {
         if(root==null){
             return 0;
         }
