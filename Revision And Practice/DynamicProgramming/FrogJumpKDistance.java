@@ -36,7 +36,6 @@ public class FrogJumpKDistance {
         }
         return dp[n-1];
     }
-
     private static int getMinEnergyMemoized(int[] arr, int n, int k) {
         int[] dp= new int[n+1];
         for(int i=0;i<dp.length;i++){
