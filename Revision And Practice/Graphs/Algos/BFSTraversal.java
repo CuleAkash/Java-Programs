@@ -10,10 +10,10 @@ public class BFSTraversal {
     public static void main(String[] args) {
         List<List<Integer>> graph = Graph.createGraph();
 
-        dfsTraversal(graph,graph.size());
+        bfsTraversal(graph,graph.size());
     }
 
-    private static void dfsTraversal(List<List<Integer>> graph, int n) {
+    private static void bfsTraversal(List<List<Integer>> graph, int n) {
         boolean[] visited = new boolean[n];
 
         for(int i=1;i<n;i++){
