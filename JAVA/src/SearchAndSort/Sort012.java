@@ -35,6 +35,10 @@ public class Sort012 {
 		int n= arr.length;
 		int i=0;
 		int nextZ=0,nextT=n-1;
+		extracted(arr, i, nextZ, nextT);
+	}
+
+	private static void extracted(int[] arr, int i, int nextZ, int nextT) {
 		while(i<=nextT)
 		{
 			if(arr[i]==0)

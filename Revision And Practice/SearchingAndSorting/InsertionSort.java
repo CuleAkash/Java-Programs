@@ -33,5 +33,20 @@ public class InsertionSort {
             }
         }
     }
+
+    private static void insertionSortRecursive(int[] arr,int size){
+        if(size<=1)
+            return;
+
+        insertionSortRecursive(arr,size-1);//[1,3,2,4,5]
+        int i= size-1;
+        int j = size-2;
+        while(j>=0 && arr[i]<arr[j]){
+            int temp = arr[j];
+            arr[j] = arr[i];
+            arr[i] =temp;
+            j--;
+        }
+    }
     
 }

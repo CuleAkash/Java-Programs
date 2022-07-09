@@ -10,7 +10,8 @@ public class BubbleSort {
         for(int i=0;i<size;i++){
             arr[i]=s.nextInt();
         } 
-        bubbleSort(arr,size);
+        // bubbleSort(arr,size);
+        bubbleSortRecursive(arr,size);
         for(int i=0;i<size;i++){
             System.out.print(arr[i]+" ");
         }
@@ -32,5 +33,18 @@ public class BubbleSort {
                 }
             }
         }
+    }
+
+    private static void bubbleSortRecursive(int[] arr,int size){
+        if(size<=1)
+            return;
+        for(int i=0;i<size-1;i++){
+            if(arr[i]>arr[i+1]){
+                int temp = arr[i+1];
+                arr[i+1] = arr[i];
+                arr[i] = temp;
+            }
+        }
+        bubbleSortRecursive(arr,size-1);
     }
 }

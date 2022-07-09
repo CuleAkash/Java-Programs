@@ -14,6 +14,7 @@ public class Fibonnaci {
 	}
 	
 	private static int fibonnaciBetter(int n) {
+		// n=3
 		int[] arr= new int[n+1];
 		for(int i=0;i<n+1;i++) {
 			arr[i]=-1;
@@ -26,6 +27,11 @@ public class Fibonnaci {
 			arr[n]=n;
 			return n;
 		}
+		// arr[0] = 0;
+		// arr[1] =1;
+		// arr[2] = 1;
+		// arr[3] = 2;
+		// arr[n] = fibonacci at nth position
 		
 		int ans1= Integer.MIN_VALUE;
 		if(arr[n-1]!=-1) {
